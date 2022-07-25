@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module CountWords where
+module Main where
 
 import           Data.Char       (toLower)
 import           Data.Foldable   (Foldable (foldl'))
@@ -26,3 +26,6 @@ runCountWords =
         . filter (not . T.null)
         . T.split isSpace
         . T.map toLower
+
+main :: IO ()
+main = runCountWords

@@ -8,7 +8,6 @@ copyright:           "2021 Author name here"
 
 extra-source-files:
 - README.md
-- ChangeLog.md
 
 # Metadata used when publishing your package
 # synopsis:            Short description of your package
@@ -23,29 +22,80 @@ dependencies:
 - base >= 4.7 && < 5
 - containers
 - text
+- streamly >= 0.8.1.1 && < 0.8.2
+- fusion-plugin
+- unordered-containers
+- vector
+- vector-hashtables
 
-library:
-  source-dirs: src
+# library:
+#   source-dirs: src
 
 executables:
-  simple-exe:
-    main:                Main.hs
-    source-dirs:         app
+  LazyMap:
+    main:                LazyMap.hs
+    source-dirs:         LazyMap
+    ghc-options:
+    - -rtsopts
+    - -O2
+
+  LazyHMRef:
+    main:                LazyHMRef.hs
+    source-dirs:         LazyHMRef
+    ghc-options:
+    - -rtsopts
+    - -O2
+
+  LazyVH:
+    main:                LazyVH.hs
+    source-dirs:         LazyVH
+    ghc-options:
+    - -rtsopts
+    - -O2
+
+  StreamlyHMRef:
+    main:                StreamlyHMRef.hs
+    source-dirs:         StreamlyHMRef
+    ghc-options:
+    - -rtsopts
+    - -O2
+    - -fdicts-strict
+    - -fmax-worker-args=16
+    - -fspec-constr-recursive=16
+    - -fplugin Fusion.Plugin
+
+  StreamlyThreadedHMRef:
+    main:                StreamlyHMRef.hs
+    source-dirs:         StreamlyHMRef
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
     - -O2
-    dependencies:
-    - countwordsHS
+    - -fdicts-strict
+    - -fmax-worker-args=16
+    - -fspec-constr-recursive=16
+    - -fplugin Fusion.Plugin
 
-tests:
-  simple-test:
-    main:                Spec.hs
-    source-dirs:         test
+  StreamlyVH:
+    main:                StreamlyVH.hs
+    source-dirs:         StreamlyVH
     ghc-options:
-    - -threaded
     - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - simple
+    - -O2
+    - -fdicts-strict
+    - -fmax-worker-args=16
+    - -fspec-constr-recursive=16
+    - -fplugin Fusion.Plugin
+
+
+# tests:
+#   simple-test:
+#     main:                Spec.hs
+#     source-dirs:         test
+#     ghc-options:
+#     - -threaded
+#     - -rtsopts
+#     - -with-rtsopts=-N
+#     dependencies:
+#     - simple
