@@ -27,6 +27,7 @@ dependencies:
 - unordered-containers
 - vector
 - vector-hashtables
+- primitive
 
 # library:
 #   source-dirs: src
@@ -87,6 +88,13 @@ executables:
     - -fmax-worker-args=16
     - -fspec-constr-recursive=16
     - -fplugin Fusion.Plugin
+
+  LinewiseVH:
+    main:                LinewiseVH.hs
+    source-dirs:         LinewiseVH
+    ghc-options:
+    - -rtsopts
+    - -O2
 
 
 # tests:
