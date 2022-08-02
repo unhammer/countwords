@@ -21,6 +21,50 @@ source-repository head
   type: git
   location: https://github.com/githubuser/countwordsHS
 
+executable BufwiseVHBS
+  main-is: BufwiseVHBS.hs
+  other-modules:
+      Paths_countwordsHS
+  hs-source-dirs:
+      BufwiseVHBS
+  ghc-options: -rtsopts -O2
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , containers
+    , fusion-plugin
+    , primitive
+    , streaming
+    , streaming-bytestring
+    , streamly >=0.8.1.1 && <0.8.2
+    , text
+    , unordered-containers
+    , vector
+    , vector-hashtables
+  default-language: Haskell2010
+
+executable LazyHMBS
+  main-is: LazyHMBS.hs
+  other-modules:
+      Paths_countwordsHS
+  hs-source-dirs:
+      LazyHMBS
+  ghc-options: -rtsopts -O2
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , containers
+    , fusion-plugin
+    , primitive
+    , streaming
+    , streaming-bytestring
+    , streamly >=0.8.1.1 && <0.8.2
+    , text
+    , unordered-containers
+    , vector
+    , vector-hashtables
+  default-language: Haskell2010
+
 executable LazyHMRef
   main-is: LazyHMRef.hs
   other-modules:
@@ -30,9 +74,12 @@ executable LazyHMRef
   ghc-options: -rtsopts -O2
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , containers
     , fusion-plugin
     , primitive
+    , streaming
+    , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
     , text
     , unordered-containers
@@ -49,9 +96,12 @@ executable LazyMap
   ghc-options: -rtsopts -O2
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , containers
     , fusion-plugin
     , primitive
+    , streaming
+    , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
     , text
     , unordered-containers
@@ -68,9 +118,12 @@ executable LazyVH
   ghc-options: -rtsopts -O2
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , containers
     , fusion-plugin
     , primitive
+    , streaming
+    , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
     , text
     , unordered-containers
@@ -87,9 +140,34 @@ executable LinewiseVH
   ghc-options: -rtsopts -O2
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , containers
     , fusion-plugin
     , primitive
+    , streaming
+    , streaming-bytestring
+    , streamly >=0.8.1.1 && <0.8.2
+    , text
+    , unordered-containers
+    , vector
+    , vector-hashtables
+  default-language: Haskell2010
+
+executable StreamingHMBS
+  main-is: StreamingHMBS.hs
+  other-modules:
+      Paths_countwordsHS
+  hs-source-dirs:
+      StreamingHMBS
+  ghc-options: -rtsopts -O2
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , containers
+    , fusion-plugin
+    , primitive
+    , streaming
+    , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
     , text
     , unordered-containers
@@ -106,9 +184,12 @@ executable StreamlyHMRef
   ghc-options: -rtsopts -O2 -fdicts-strict -fmax-worker-args=16 -fspec-constr-recursive=16 -fplugin Fusion.Plugin
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , containers
     , fusion-plugin
     , primitive
+    , streaming
+    , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
     , text
     , unordered-containers
@@ -125,9 +206,12 @@ executable StreamlyThreadedHMRef
   ghc-options: -threaded -rtsopts -with-rtsopts=-N -O2 -fdicts-strict -fmax-worker-args=16 -fspec-constr-recursive=16 -fplugin Fusion.Plugin
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , containers
     , fusion-plugin
     , primitive
+    , streaming
+    , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
     , text
     , unordered-containers
@@ -144,9 +228,12 @@ executable StreamlyVH
   ghc-options: -rtsopts -O2 -fdicts-strict -fmax-worker-args=16 -fspec-constr-recursive=16 -fplugin Fusion.Plugin
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , containers
     , fusion-plugin
     , primitive
+    , streaming
+    , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
     , text
     , unordered-containers

@@ -1,3 +1,4 @@
+-- From https://discourse.haskell.org/t/mutable-data-structures-why-so-hard-to-find/4558/54
 {-# LANGUAGE OverloadedStrings #-}
 
 module Main where

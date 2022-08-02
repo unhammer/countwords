@@ -28,6 +28,9 @@ dependencies:
 - vector
 - vector-hashtables
 - primitive
+- bytestring
+- streaming
+- streaming-bytestring
 
 # library:
 #   source-dirs: src
@@ -95,6 +98,28 @@ executables:
     ghc-options:
     - -rtsopts
     - -O2
+
+  StreamingHMBS:
+    main:                StreamingHMBS.hs
+    source-dirs:         StreamingHMBS
+    ghc-options:
+    - -rtsopts
+    - -O2
+
+  LazyHMBS:
+    main:                LazyHMBS.hs
+    source-dirs:         LazyHMBS
+    ghc-options:
+    - -rtsopts
+    - -O2
+
+  BufwiseVHBS:
+    main:                BufwiseVHBS.hs
+    source-dirs:         BufwiseVHBS
+    ghc-options:
+    - -rtsopts
+    - -O2
+
 
 
 # tests:
