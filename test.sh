@@ -236,8 +236,10 @@ tclsh simple.tcl <kjvbible_x10.txt | python3 normalize.py >output.txt
 git diff --exit-code output.txt
 
 echo Haskell simple
-cd haskell
-stack install --local-bin-path .
-cd ..
-./haskell/simple-exe <kjvbible_x10.txt | python3 normalize.py >output.txt
+( cd haskell && stack install --local-bin-path bin )
+./haskell/bin/LazyVH <kjvbible_x10.txt | python3 normalize.py >output.txt
+git diff --exit-code output.txt
+
+echo Haskell optimized
+./haskell/bin/BufwiseVHBS <kjvbible_x10.txt | python3 normalize.py >output.txt
 git diff --exit-code output.txt

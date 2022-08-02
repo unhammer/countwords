@@ -33,5 +33,5 @@ java/*.class
 simple-cl
 simple-pas
 haskell/.stack-work/
-haskell/simple-exe
+haskell/bin
 haskell/stack.yaml.lock
