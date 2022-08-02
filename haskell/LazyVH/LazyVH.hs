@@ -1,7 +1,8 @@
 module Main where
 
 import Control.Monad      (foldM, when)
-import Data.Char          (isSpace, toLower)
+import Data.Char          (isSpace)
+import Data.FastChar
 import Data.List          (sortOn, filter)
 import Data.Ord           (Down(..))
 import System.IO          (stdin)

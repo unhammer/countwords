@@ -9,6 +9,8 @@ import           Data.Ord        (Down (..), comparing)
 import qualified Data.Text       as T
 import qualified Data.Text.IO    as T
 
+import           Data.FastChar
+
 import qualified Data.Vector.Mutable as VM
 import qualified Data.Vector.Unboxed.Mutable as UM
 import qualified Data.Vector.Hashtables as H
@@ -27,7 +29,7 @@ main = do
   t <- H.initialize 10000 :: IO (HashTable T.Text Int)
   let
     go = unlessM isEOF $ do
-      words <- T.words . T.toLower <$> T.getLine
+      words <- T.words . T.map toLower <$> T.getLine
       traverse_ (H.alter t (Just . maybe 1 (+ 1))) words
       go
   go

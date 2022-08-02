@@ -2,13 +2,13 @@
 -- https://github.com/composewell/streamly-examples/blob/master/examples/WordFrequency.hs
 -- but I don't seem to have classifyMutWith so explicitly making a HashMap of IORefs
 
-import Data.Char (isSpace)
 import Data.Foldable (traverse_)
 import Data.Function ((&))
 import System.Environment (getArgs)
 import System.IO          (stdin)
 
-import qualified Data.Char as Char
+import Data.FastChar
+import Data.Char          (isSpace)
 import qualified Data.List as List
 import qualified Data.Ord as Ord
 import Data.List          (sortOn, filter)
@@ -55,23 +55,3 @@ prettyPrint (a,b) = putStrLn $ a <> " " <> show b
 incf Nothing  = Just 1
 incf (Just x) = Just (x + 1)
 {-# INLINE incf #-}
-
--- These make it slightly faster than with Data.Char's versions:
-{-# INLINE toLower #-}
-toLower :: Char -> Char
-toLower c
-  | uc >= 0x61 && uc <= 0x7a = c
-  | otherwise = Char.toLower c
-  where
-    uc = fromIntegral (Char.ord c) :: Word
-
-{-# INLINE isAlpha #-}
-isAlpha :: Char -> Bool
-isAlpha c
-  | uc >= 0x61 && uc <= 0x7a = True
-  | otherwise = Char.isAlpha c
-  where
-    uc = fromIntegral (Char.ord c) :: Word
-
-
-

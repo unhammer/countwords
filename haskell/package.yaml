@@ -32,8 +32,8 @@ dependencies:
 - streaming
 - streaming-bytestring
 
-# library:
-#   source-dirs: src
+library:
+  source-dirs: src
 
 executables:
   LazyMap:
@@ -42,6 +42,8 @@ executables:
     ghc-options:
     - -rtsopts
     - -O2
+    dependencies:
+    - countwordsHS
 
   LazyHMRef:
     main:                LazyHMRef.hs
@@ -49,6 +51,8 @@ executables:
     ghc-options:
     - -rtsopts
     - -O2
+    dependencies:
+    - countwordsHS
 
   LazyVH:
     main:                LazyVH.hs
@@ -56,6 +60,8 @@ executables:
     ghc-options:
     - -rtsopts
     - -O2
+    dependencies:
+    - countwordsHS
 
   StreamlyHMRef:
     main:                StreamlyHMRef.hs
@@ -67,6 +73,8 @@ executables:
     - -fmax-worker-args=16
     - -fspec-constr-recursive=16
     - -fplugin Fusion.Plugin
+    dependencies:
+    - countwordsHS
 
   StreamlyThreadedHMRef:
     main:                StreamlyHMRef.hs
@@ -80,6 +88,8 @@ executables:
     - -fmax-worker-args=16
     - -fspec-constr-recursive=16
     - -fplugin Fusion.Plugin
+    dependencies:
+    - countwordsHS
 
   StreamlyVH:
     main:                StreamlyVH.hs
@@ -91,6 +101,8 @@ executables:
     - -fmax-worker-args=16
     - -fspec-constr-recursive=16
     - -fplugin Fusion.Plugin
+    dependencies:
+    - countwordsHS
 
   LinewiseVH:
     main:                LinewiseVH.hs
@@ -98,6 +110,8 @@ executables:
     ghc-options:
     - -rtsopts
     - -O2
+    dependencies:
+    - countwordsHS
 
   StreamingHMBS:
     main:                StreamingHMBS.hs
@@ -112,6 +126,8 @@ executables:
     ghc-options:
     - -rtsopts
     - -O2
+    dependencies:
+    - countwordsHS
 
   BufwiseVHBS:
     main:                BufwiseVHBS.hs

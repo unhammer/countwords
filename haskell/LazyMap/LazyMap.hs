@@ -2,7 +2,7 @@
 
 module Main where
 
-import           Data.Char       (toLower)
+import           Data.FastChar
 import           Data.Foldable   (Foldable (foldl'))
 import           Data.List       (sortBy)
 import qualified Data.Map.Strict as M
