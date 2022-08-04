@@ -31,7 +31,32 @@ library
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , clutter
     , containers
+    , fusion-plugin
+    , primitive
+    , streaming
+    , streaming-bytestring
+    , streamly >=0.8.1.1 && <0.8.2
+    , text
+    , unordered-containers
+    , vector
+    , vector-hashtables
+  default-language: Haskell2010
+
+executable BufwiseClutter
+  main-is: BufwiseClutter.hs
+  other-modules:
+      Paths_countwordsHS
+  hs-source-dirs:
+      BufwiseClutter
+  ghc-options: -rtsopts -O2
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , clutter
+    , containers
+    , countwordsHS
     , fusion-plugin
     , primitive
     , streaming
@@ -53,6 +78,7 @@ executable BufwiseVHBS
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , clutter
     , containers
     , fusion-plugin
     , primitive
@@ -75,6 +101,7 @@ executable LazyHMBS
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , clutter
     , containers
     , countwordsHS
     , fusion-plugin
@@ -98,6 +125,7 @@ executable LazyHMRef
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , clutter
     , containers
     , countwordsHS
     , fusion-plugin
@@ -121,6 +149,7 @@ executable LazyMap
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , clutter
     , containers
     , countwordsHS
     , fusion-plugin
@@ -144,6 +173,31 @@ executable LazyVH
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , clutter
+    , containers
+    , countwordsHS
+    , fusion-plugin
+    , primitive
+    , streaming
+    , streaming-bytestring
+    , streamly >=0.8.1.1 && <0.8.2
+    , text
+    , unordered-containers
+    , vector
+    , vector-hashtables
+  default-language: Haskell2010
+
+executable LinewiseClutter
+  main-is: LinewiseClutter.hs
+  other-modules:
+      Paths_countwordsHS
+  hs-source-dirs:
+      LinewiseClutter
+  ghc-options: -rtsopts -O2
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , clutter
     , containers
     , countwordsHS
     , fusion-plugin
@@ -167,6 +221,7 @@ executable LinewiseVH
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , clutter
     , containers
     , countwordsHS
     , fusion-plugin
@@ -190,6 +245,7 @@ executable StreamingHMBS
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , clutter
     , containers
     , fusion-plugin
     , primitive
@@ -212,6 +268,7 @@ executable StreamlyHMRef
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , clutter
     , containers
     , countwordsHS
     , fusion-plugin
@@ -235,6 +292,7 @@ executable StreamlyThreadedHMRef
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , clutter
     , containers
     , countwordsHS
     , fusion-plugin
@@ -258,6 +316,7 @@ executable StreamlyVH
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , clutter
     , containers
     , countwordsHS
     , fusion-plugin

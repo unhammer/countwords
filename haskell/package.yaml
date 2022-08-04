@@ -31,6 +31,7 @@ dependencies:
 - bytestring
 - streaming
 - streaming-bytestring
+- clutter
 
 library:
   source-dirs: src
@@ -107,6 +108,24 @@ executables:
   LinewiseVH:
     main:                LinewiseVH.hs
     source-dirs:         LinewiseVH
+    ghc-options:
+    - -rtsopts
+    - -O2
+    dependencies:
+    - countwordsHS
+
+  LinewiseClutter:
+    main:                LinewiseClutter.hs
+    source-dirs:         LinewiseClutter
+    ghc-options:
+    - -rtsopts
+    - -O2
+    dependencies:
+    - countwordsHS
+
+  BufwiseClutter:
+    main:                BufwiseClutter.hs
+    source-dirs:         BufwiseClutter
     ghc-options:
     - -rtsopts
     - -O2
