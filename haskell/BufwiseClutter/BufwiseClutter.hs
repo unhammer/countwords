@@ -20,7 +20,7 @@ import qualified TextCounter as C
 
 main :: IO ()
 main = do
-  t <- C.new 60000
+  t <- C.new 48000 16000
   let incr = C.count t
   flip fix T.empty $ \rec b -> do
     bs <- T.hGetChunk stdin -- (64 * 1024)
@@ -31,7 +31,7 @@ main = do
         (initial, last) <-
               T.spanEndM (pure . not . isSpace)
                 . mappend b
-                . T.map toLower
+                . T.toLower
                 $ bs
         mapM_ incr (T.words initial)
         rec last
