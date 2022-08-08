@@ -1,6 +1,8 @@
 
 Playing with counting word frequencies (and the performance thereof) in various languages. See the full article for context and background: [https://benhoyt.com/writings/count-words/](https://benhoyt.com/writings/count-words/)
 
+This fork is for improving the Haskell versions, see up-to-date [haskell results in this repo](haskell/README.md).
+
 
 ## NOTE
 
