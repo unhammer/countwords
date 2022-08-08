@@ -20,9 +20,9 @@ unlessM m1 m2 = m1 >>= \b -> unless b m2
 
 main :: IO ()
 main = do
-  t <- C.new 60000
+  t <- C.new 48000 16000
   let go = unlessM isEOF $ do
-        wrds <- T.words .  T.map toLower <$> T.getLine
+        wrds <- T.words .  T.toLower <$> T.getLine
         traverse_ (C.count t) wrds
         go
   go
