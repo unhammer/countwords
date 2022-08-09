@@ -41,7 +41,6 @@ main = do
          & Unicode.decodeUtf8                   -- SerialT IO Char
          & Stream.map toLower                   -- SerialT IO Char
          & Stream.wordsBy isSpace Fold.toList   -- SerialT IO String
-         & Stream.filter (all isAlpha)          -- SerialT IO String
          & Stream.mapM_ (H.alter freqtable incf) -- IO (Map String (IORef Int))
 
     -- Print the top hashmap entries
