@@ -6,8 +6,8 @@ stack --bash-completion-index 2 --bash-completion-word stack --bash-completion-w
     | while read -r cexe; do
     exe=${cexe##countwordsHS:exe:}
     if command -V nix &>/dev/null; then
-        nix run nixpkgs.hyperfine -c stack exec hyperfine -- \
-            --warmup 1 "\"$exe\" <../kjvbible_x10.txt"
+      # echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
+      stack exec nix -- run 'nixpkgs#hyperfine' -- --warmup 1 "\"$exe\" <../kjvbible_x10.txt"
     elif command -V hyperfine &>/dev/null; then
       stack exec hyperfine -- --warmup 1 "\"$exe\" <../kjvbible_x10.txt"
     else
