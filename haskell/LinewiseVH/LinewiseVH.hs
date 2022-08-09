@@ -26,7 +26,7 @@ unlessM m1 m2 = m1 >>= \b -> unless b m2
 
 main :: IO ()
 main = do
-  t <- H.initialize 10000 :: IO (HashTable T.Text Int)
+  t <- H.initialize 64000 :: IO (HashTable T.Text Int)
   let
     go = unlessM isEOF $ do
       words <- T.words . T.map toLower <$> T.getLine
