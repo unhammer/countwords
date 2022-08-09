@@ -32,6 +32,7 @@ dependencies:
 - streaming
 - streaming-bytestring
 - clutter
+- hashable
 
 library:
   source-dirs: src
@@ -126,6 +127,15 @@ executables:
   BufwiseClutter:
     main:                BufwiseClutter.hs
     source-dirs:         BufwiseClutter
+    ghc-options:
+    - -rtsopts
+    - -O2
+    dependencies:
+    - countwordsHS
+
+  BufwiseFiniteBS:
+    main:                BufwiseFiniteBS.hs
+    source-dirs:         BufwiseFiniteBS
     ghc-options:
     - -rtsopts
     - -O2
