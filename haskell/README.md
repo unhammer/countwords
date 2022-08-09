@@ -10,20 +10,20 @@ use the clutter package.
 Run `./run.sh` to time all the versions. If you have nix installed,
 it'll use `hyperfine` to get more accurate timings.
 
-| Command               | Mean [s]           | Min [s] | Max [s] |
-| :---                  | ---:               | ---:    | ---:    |
-| BufwiseClutter        | 0.725 s ±  0.017 s | 0.705 s | 0.753 s |
-| LinewiseClutter       | 1.015 s ±  0.025 s | 0.982 s | 1.047 s |
-| BufwiseVHBS           | 1.346 s ±  0.027 s | 1.302 s | 1.376 s |
-| LazyVH                | 2.075 s ±  0.035 s | 2.035 s | 2.139 s |
-| StreamlyVH            | 2.082 s ±  0.082 s | 2.018 s | 2.262 s |
-| StreamlyHMRef         | 2.228 s ±  0.033 s | 2.184 s | 2.275 s |
-| LinewiseVH            | 2.348 s ±  0.077 s | 2.251 s | 2.504 s |
-| LazyHMRef             | 2.782 s ±  0.057 s | 2.699 s | 2.884 s |
-| StreamlyThreadedHMRef | 2.912 s ±  0.094 s | 2.824 s | 3.129 s |
-| LazyHMBS              | 5.700 s ±  0.430 s | 5.356 s | 6.797 s |
-| LazyMap               | 5.721 s ±  0.105 s | 5.594 s | 5.942 s |
-| StreamingHMBS         | 6.246 s ±  0.099 s | 6.160 s | 6.488 s |
+| Command               | Mean [s]      | Min [s] | Max [s] |
+| :---                  | ---:          | ---:    | ---:    |
+| BufwiseClutter        | 0.931 ± 0.037 | 0.890   | 0.999   |
+| LinewiseClutter       | 1.235 ± 0.049 | 1.155   | 1.301   |
+| BufwiseVHBS           | 1.346 ± 0.027 | 1.302   | 1.376   |
+| LazyVH                | 2.075 ± 0.035 | 2.035   | 2.139   |
+| StreamlyVH            | 2.082 ± 0.082 | 2.018   | 2.262   |
+| StreamlyHMRef         | 2.228 ± 0.033 | 2.184   | 2.275   |
+| LinewiseVH            | 2.348 ± 0.077 | 2.251   | 2.504   |
+| LazyHMRef             | 2.782 ± 0.057 | 2.699   | 2.884   |
+| StreamlyThreadedHMRef | 2.912 ± 0.094 | 2.824   | 3.129   |
+| LazyHMBS              | 5.700 ± 0.430 | 5.356   | 6.797   |
+| LazyMap               | 5.721 ± 0.105 | 5.594   | 5.942   |
+| StreamingHMBS         | 6.246 ± 0.099 | 6.160   | 6.488   |
 
 For comparison with the other benchmarks, on the same machine:
 | Command              | Mean [s]      | Min [s] | Max [s] |
