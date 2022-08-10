@@ -12,10 +12,10 @@ it'll use `hyperfine` to get more accurate timings.
 
 | Command               | Mean [s]      | Min [s] | Max [s] |
 | :---                  | ---:          | ---:    | ---:    |
-| BufwiseClutter        | 0.974 ± 0.016 | 0.958   | 1.002   |
-| BufwiseFiniteBS       | 1.081 ± 0.088 | 0.999   | 1.279   |
-| LinewiseClutter       | 1.263 ± 0.045 | 1.235   | 1.389   |
-| BufwiseVHBS           | 1.346 ± 0.027 | 1.302   | 1.376   |
+| BufwiseFiniteBS       | 0.870 ± 0.008 | 0.860   | 0.882   |
+| BufwiseClutter        | 0.961 ± 0.010 | 0.949   | 0.975   |
+| LinewiseClutter       | 1.240 ± 0.010 | 1.219   | 1.255   |
+| BufwiseVHBS           | 1.278 ± 0.007 | 1.268   | 1.291   |
 | LazyVH                | 2.075 ± 0.035 | 2.035   | 2.139   |
 | StreamlyVH            | 2.082 ± 0.082 | 2.018   | 2.262   |
 | StreamlyHMRef         | 2.228 ± 0.033 | 2.184   | 2.275   |

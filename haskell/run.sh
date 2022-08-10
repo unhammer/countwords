@@ -3,8 +3,9 @@
 stack build || exit 1
 
 normalize () {
-    # tac on a sponge at the end to avoid BrokenPipeError from diff's short-circuiting
-    grep -v '^ ' | python3 ../normalize.py | tac | tac
+    # sponge it up to avoid BrokenPipeError from diff's short-circuiting
+    out=$(grep -v '^ ' | python3 ../normalize.py)
+    echo "${out}"
 }
 
 stack --bash-completion-index 2 --bash-completion-word stack --bash-completion-word build --bash-completion-word countwordsHS:exe: \

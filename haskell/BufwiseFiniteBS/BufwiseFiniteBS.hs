@@ -12,14 +12,14 @@ import System.IO (stdin)
 import qualified Data.ByteString as B
 import qualified Data.ByteString.Char8 as C
 
-
+-- counton
 import qualified Finite as H
 
 
 main :: IO ()
 main = do
-  t <- H.new 128000
-  let incr = H.count t
+  t <- H.new 48017 100003
+  let incr = H.countOn H.ascii t
   flip fix B.empty $ \rec b -> do
     bs <- B.hGet stdin (64 * 1024)
     if B.null bs
