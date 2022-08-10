@@ -24,7 +24,6 @@ source-repository head
 library
   exposed-modules:
       Data.FastChar
-      Finite
   other-modules:
       Paths_countwordsHS
   hs-source-dirs:
@@ -34,6 +33,7 @@ library
     , bytestring
     , clutter
     , containers
+    , finite
     , fusion-plugin
     , hashable
     , primitive
@@ -59,6 +59,7 @@ executable BufwiseClutter
     , clutter
     , containers
     , countwordsHS
+    , finite
     , fusion-plugin
     , hashable
     , primitive
@@ -84,6 +85,7 @@ executable BufwiseFiniteBS
     , clutter
     , containers
     , countwordsHS
+    , finite
     , fusion-plugin
     , hashable
     , primitive
@@ -108,6 +110,7 @@ executable BufwiseVHBS
     , bytestring
     , clutter
     , containers
+    , finite
     , fusion-plugin
     , hashable
     , primitive
@@ -133,6 +136,7 @@ executable LazyHMBS
     , clutter
     , containers
     , countwordsHS
+    , finite
     , fusion-plugin
     , hashable
     , primitive
@@ -158,6 +162,7 @@ executable LazyHMRef
     , clutter
     , containers
     , countwordsHS
+    , finite
     , fusion-plugin
     , hashable
     , primitive
@@ -183,6 +188,7 @@ executable LazyMap
     , clutter
     , containers
     , countwordsHS
+    , finite
     , fusion-plugin
     , hashable
     , primitive
@@ -208,6 +214,7 @@ executable LazyVH
     , clutter
     , containers
     , countwordsHS
+    , finite
     , fusion-plugin
     , hashable
     , primitive
@@ -233,6 +240,7 @@ executable LinewiseClutter
     , clutter
     , containers
     , countwordsHS
+    , finite
     , fusion-plugin
     , hashable
     , primitive
@@ -258,6 +266,7 @@ executable LinewiseVH
     , clutter
     , containers
     , countwordsHS
+    , finite
     , fusion-plugin
     , hashable
     , primitive
@@ -282,6 +291,7 @@ executable StreamingHMBS
     , bytestring
     , clutter
     , containers
+    , finite
     , fusion-plugin
     , hashable
     , primitive
@@ -307,6 +317,7 @@ executable StreamlyHMRef
     , clutter
     , containers
     , countwordsHS
+    , finite
     , fusion-plugin
     , hashable
     , primitive
@@ -332,6 +343,7 @@ executable StreamlyThreadedHMRef
     , clutter
     , containers
     , countwordsHS
+    , finite
     , fusion-plugin
     , hashable
     , primitive
@@ -357,6 +369,7 @@ executable StreamlyVH
     , clutter
     , containers
     , countwordsHS
+    , finite
     , fusion-plugin
     , hashable
     , primitive
