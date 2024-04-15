@@ -1,6 +1,6 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.4.
+-- This file has been generated from package.yaml by hpack version 0.35.0.
 --
 -- see: https://github.com/sol/hpack
 
@@ -37,6 +37,7 @@ library
     , fusion-plugin
     , hashable
     , primitive
+    , radix-tree
     , streaming
     , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
@@ -63,6 +64,7 @@ executable BufwiseClutter
     , fusion-plugin
     , hashable
     , primitive
+    , radix-tree
     , streaming
     , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
@@ -89,6 +91,7 @@ executable BufwiseFiniteBS
     , fusion-plugin
     , hashable
     , primitive
+    , radix-tree
     , streaming
     , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
@@ -114,6 +117,7 @@ executable BufwiseVHBS
     , fusion-plugin
     , hashable
     , primitive
+    , radix-tree
     , streaming
     , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
@@ -140,6 +144,7 @@ executable LazyHMBS
     , fusion-plugin
     , hashable
     , primitive
+    , radix-tree
     , streaming
     , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
@@ -166,6 +171,7 @@ executable LazyHMRef
     , fusion-plugin
     , hashable
     , primitive
+    , radix-tree
     , streaming
     , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
@@ -192,6 +198,7 @@ executable LazyMap
     , fusion-plugin
     , hashable
     , primitive
+    , radix-tree
     , streaming
     , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
@@ -218,6 +225,7 @@ executable LazyVH
     , fusion-plugin
     , hashable
     , primitive
+    , radix-tree
     , streaming
     , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
@@ -244,6 +252,7 @@ executable LinewiseClutter
     , fusion-plugin
     , hashable
     , primitive
+    , radix-tree
     , streaming
     , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
@@ -270,6 +279,7 @@ executable LinewiseVH
     , fusion-plugin
     , hashable
     , primitive
+    , radix-tree
     , streaming
     , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
@@ -295,6 +305,7 @@ executable StreamingHMBS
     , fusion-plugin
     , hashable
     , primitive
+    , radix-tree
     , streaming
     , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
@@ -321,6 +332,7 @@ executable StreamlyHMRef
     , fusion-plugin
     , hashable
     , primitive
+    , radix-tree
     , streaming
     , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
@@ -347,6 +359,7 @@ executable StreamlyThreadedHMRef
     , fusion-plugin
     , hashable
     , primitive
+    , radix-tree
     , streaming
     , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
@@ -373,6 +386,7 @@ executable StreamlyVH
     , fusion-plugin
     , hashable
     , primitive
+    , radix-tree
     , streaming
     , streaming-bytestring
     , streamly >=0.8.1.1 && <0.8.2
