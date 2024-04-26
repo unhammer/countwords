@@ -26,7 +26,7 @@ dependencies:
 - fusion-plugin
 - unordered-containers
 - vector
-- vector-hashtables
+- vector-hashtables >= 0.1.2
 - primitive
 - bytestring
 - streaming

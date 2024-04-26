@@ -28,13 +28,13 @@ main = do
              | otherwise       = id
   freqtable <- H.initialize 64000 :: IO VHT
   T.hGetContents stdin >>= \contents -> do
-    mapM_ (H.alter freqtable incf) $ filter (not . T.null) $ T.split isSpace $ T.map toLower contents
+    mapM_ (H.upsert freqtable incf) $ filter (not . T.null) $ T.split isSpace $ T.map toLower contents
     counts <- H.toList freqtable
     traverse prettyPrint $ cutoff $ sortOn (Down . snd) counts
     pure ()
 
 prettyPrint (a,b) = T.putStrLn $ a <> T.pack " " <> T.pack (show b)
 
-incf Nothing  = Just 1
-incf (Just x) = Just (x + 1)
+incf Nothing  = 1
+incf (Just x) = (x + 1)
 {-# INLINE incf #-}

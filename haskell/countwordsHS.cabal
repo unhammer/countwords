@@ -1,6 +1,6 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.4.
+-- This file has been generated from package.yaml by hpack version 0.36.0.
 --
 -- see: https://github.com/sol/hpack
 
@@ -43,7 +43,7 @@ library
     , text
     , unordered-containers
     , vector
-    , vector-hashtables
+    , vector-hashtables >=0.1.2
   default-language: Haskell2010
 
 executable BufwiseClutter
@@ -69,7 +69,7 @@ executable BufwiseClutter
     , text
     , unordered-containers
     , vector
-    , vector-hashtables
+    , vector-hashtables >=0.1.2
   default-language: Haskell2010
 
 executable BufwiseFiniteBS
@@ -95,7 +95,7 @@ executable BufwiseFiniteBS
     , text
     , unordered-containers
     , vector
-    , vector-hashtables
+    , vector-hashtables >=0.1.2
   default-language: Haskell2010
 
 executable BufwiseVHBS
@@ -120,7 +120,7 @@ executable BufwiseVHBS
     , text
     , unordered-containers
     , vector
-    , vector-hashtables
+    , vector-hashtables >=0.1.2
   default-language: Haskell2010
 
 executable LazyHMBS
@@ -146,7 +146,7 @@ executable LazyHMBS
     , text
     , unordered-containers
     , vector
-    , vector-hashtables
+    , vector-hashtables >=0.1.2
   default-language: Haskell2010
 
 executable LazyHMRef
@@ -172,7 +172,7 @@ executable LazyHMRef
     , text
     , unordered-containers
     , vector
-    , vector-hashtables
+    , vector-hashtables >=0.1.2
   default-language: Haskell2010
 
 executable LazyMap
@@ -198,7 +198,7 @@ executable LazyMap
     , text
     , unordered-containers
     , vector
-    , vector-hashtables
+    , vector-hashtables >=0.1.2
   default-language: Haskell2010
 
 executable LazyVH
@@ -224,7 +224,7 @@ executable LazyVH
     , text
     , unordered-containers
     , vector
-    , vector-hashtables
+    , vector-hashtables >=0.1.2
   default-language: Haskell2010
 
 executable LinewiseClutter
@@ -250,7 +250,7 @@ executable LinewiseClutter
     , text
     , unordered-containers
     , vector
-    , vector-hashtables
+    , vector-hashtables >=0.1.2
   default-language: Haskell2010
 
 executable LinewiseVH
@@ -276,7 +276,7 @@ executable LinewiseVH
     , text
     , unordered-containers
     , vector
-    , vector-hashtables
+    , vector-hashtables >=0.1.2
   default-language: Haskell2010
 
 executable StreamingHMBS
@@ -301,7 +301,7 @@ executable StreamingHMBS
     , text
     , unordered-containers
     , vector
-    , vector-hashtables
+    , vector-hashtables >=0.1.2
   default-language: Haskell2010
 
 executable StreamlyHMRef
@@ -327,7 +327,7 @@ executable StreamlyHMRef
     , text
     , unordered-containers
     , vector
-    , vector-hashtables
+    , vector-hashtables >=0.1.2
   default-language: Haskell2010
 
 executable StreamlyThreadedHMRef
@@ -353,7 +353,7 @@ executable StreamlyThreadedHMRef
     , text
     , unordered-containers
     , vector
-    , vector-hashtables
+    , vector-hashtables >=0.1.2
   default-language: Haskell2010
 
 executable StreamlyVH
@@ -379,5 +379,5 @@ executable StreamlyVH
     , text
     , unordered-containers
     , vector
-    , vector-hashtables
+    , vector-hashtables >=0.1.2
   default-language: Haskell2010

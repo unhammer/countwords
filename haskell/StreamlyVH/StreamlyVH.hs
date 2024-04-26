@@ -41,7 +41,7 @@ main = do
          & Unicode.decodeUtf8                   -- SerialT IO Char
          & Stream.map toLower                   -- SerialT IO Char
          & Stream.wordsBy isSpace Fold.toList   -- SerialT IO String
-         & Stream.mapM_ (H.alter freqtable incf) -- IO (Map String (IORef Int))
+         & Stream.mapM_ (H.upsert freqtable incf) -- IO (Map String (IORef Int))
 
     -- Print the top hashmap entries
     counts <- H.toList freqtable
@@ -51,6 +51,6 @@ main = do
 
 prettyPrint (a,b) = putStrLn $ a <> " " <> show b
 
-incf Nothing  = Just 1
-incf (Just x) = Just (x + 1)
+incf Nothing  = 1
+incf (Just x) = (x + 1)
 {-# INLINE incf #-}

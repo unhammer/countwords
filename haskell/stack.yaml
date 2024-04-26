@@ -42,7 +42,7 @@ packages:
 extra-deps:
 - unicode-data-0.3.0@sha256:0545e079705a5381d0893f8fe8daaa08fc9174baeab269b9cf651817d8eadbc6,5123
 - streamly-0.8.1.1
-- vector-hashtables-0.1.1.1@sha256:cb4ba4af6b83b6956278bbfe8d0f779a40928728e82977e566c0103fe8d6c867,2725
+- vector-hashtables-0.1.2.0
 - git: https://github.com/noughtmare/clutter.git
   commit: a8364c0adf377501a2b012336db57edae380c49f
 - git: https://github.com/kalhauge/finite.git

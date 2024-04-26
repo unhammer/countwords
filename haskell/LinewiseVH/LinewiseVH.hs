@@ -30,7 +30,7 @@ main = do
   let
     go = unlessM isEOF $ do
       words <- T.words . T.map toLower <$> T.getLine
-      traverse_ (H.alter t (Just . maybe 1 (+ 1))) words
+      traverse_ (H.upsert t (maybe 1 (+ 1))) words
       go
   go
   xs <- sortBy (comparing (Down . snd)) <$> H.toList t

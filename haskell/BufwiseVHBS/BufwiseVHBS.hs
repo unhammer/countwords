@@ -25,7 +25,7 @@ type HashTable k v =
 main :: IO ()
 main = do
   t <- H.initialize 64000 :: IO (HashTable B.ByteString Int)
-  let incr = H.alter t (Just . maybe 1 (+ 1))
+  let incr = H.upsert t (maybe 1 (+ 1))
   flip fix B.empty $ \rec b -> do
     bs <- B.hGet stdin (64 * 1024)
     if B.null bs
